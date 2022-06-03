@@ -1,0 +1,34 @@
+--mode train
+--model_name bts_eigen_v2_pytorch_test
+--encoder densenet161_bts
+--dataset kitti
+--data_path /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical
+--gt_path /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical
+--filenames_file /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical/tmp_train.txt
+--batch_size 2
+--num_epochs 2
+--learning_rate 1e-4
+--weight_decay 1e-2
+--adam_eps 1e-3
+--num_threads 1
+--input_height 288
+--input_width 512
+--max_depth 117
+--do_kb_crop
+--do_random_rotate
+--degree 10.0
+--log_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models
+
+
+--dist_url tcp://127.0.0.1:2345
+
+--log_freq 100
+
+--eval_freq 500
+--data_path_eval /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical
+--gt_path_eval /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical
+--filenames_file_eval /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical/tmp_val.txt
+--min_depth_eval 2
+--max_depth_eval 117
+--eval_summary_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models/eval
+--garg_crop
