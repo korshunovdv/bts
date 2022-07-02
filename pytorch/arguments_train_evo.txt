@@ -1,5 +1,5 @@
 --mode train
---model_name bts_eigen_v2_pytorch_test
+--model_name evo_bags
 --encoder densenet161_bts
 --dataset kitti
 --data_path /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical
@@ -17,7 +17,7 @@
 --do_kb_crop
 --do_random_rotate
 --degree 10.0
---log_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models
+--log_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models_tmp
 
 
 --dist_url tcp://127.0.0.1:2345
@@ -30,5 +30,5 @@
 --filenames_file_eval /home/dvkorshunov/mono_depth/monocular_depth_estimation/datasets/bags_historical/tmp_val.txt
 --min_depth_eval 2
 --max_depth_eval 117
---eval_summary_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models/eval
+--eval_summary_directory /home/dvkorshunov/mono_depth/monocular_depth_estimation/networks/bts/pytorch/models_tmp/eval
 --garg_crop
